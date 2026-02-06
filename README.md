@@ -6,8 +6,8 @@ By day I work at [Edge Impulse](https://edgeimpulse.com) helping bring machine l
 
 ## What I'm building
 
-- **TacoFinder** — iOS app that finds nearby taco spots using SwiftUI, MapKit, and Google Places. Built entirely with [Claude Code](https://claude.ai/claude-code).
-- **ScatTrax** - iOS 
+- **TacoFinder** — iOS app that finds nearby taco spots using SwiftUI, MapKit, and Google Places. 
+- **ScatTrax** - iOS that identifies species of animal using ML to classify their scat using iNaturalist. 
 - **CNC & woodworking** — Custom fabrication projects, from tap handles to signage
 - **3D printing** — Rapid prototyping for everything from enclosures to jigs
 
