@@ -13,7 +13,7 @@ By day I work at [Edge Impulse](https://edgeimpulse.com) helping bring machine l
 
 ## How I work
 
-I like shipping fast, learning by doing, and using the best tool for the job — whether that's an LLM, a router bit, or a soldering iron.
+Learn by doing, and using the best tool for the job — whether that's an LLM, a router bit, or a soldering iron.
 
 ## Get in touch
 
