@@ -1,6 +1,6 @@
 # Hey, I'm Patrick
 
-I build things — software, hardware, and everything in between.
+I enjoy building things — software, hardware, and everything in between.
 
 By day I work at [Edge Impulse](https://edgeimpulse.com) helping bring machine learning to edge devices. By night I'm usually in the shop running the CNC, 3D printing parts, or hacking on side projects.
 
