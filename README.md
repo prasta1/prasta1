@@ -1,8 +1,8 @@
 # Hey, I'm Patrick
 
-I enjoy building things — software, hardware, and everything in between.
+I enjoy building things — mostly with my hands at a workbench, but sometimes with my fingers at a keyboard. 
 
-By day I work at [Edge Impulse](https://edgeimpulse.com) helping bring machine learning to edge devices. By night I'm usually in the shop running the CNC, 3D printing parts, or hacking on side projects.
+By day I work at [Edge Impulse](https://edgeimpulse.com) working with customers and prospects to bring machine learning to edge devices. By night I'm usually in the shop running the CNC, 3D printing parts, or hacking on side projects.
 
 ## What I'm building
 
@@ -13,7 +13,7 @@ By day I work at [Edge Impulse](https://edgeimpulse.com) helping bring machine l
 
 ## How I work
 
-Learn by doing, and using the best tool for the job — whether that's an LLM, a router bit, or a soldering iron.
+Learn by doing, and using the best tool for the job — whether that's a chainsaw, a router bit, or an LLM.
 
 ## Get in touch
 
