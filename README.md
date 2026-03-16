@@ -1,23 +1,25 @@
 # Hey, I'm Patrick
 
-I enjoy building things — mostly with my hands at a workbench, but sometimes with my fingers at a keyboard. 
+I enjoy building things — mostly with my hands at a workbench, but sometimes with my fingers at a keyboard.
 
-By day I work at [Edge Impulse](https://edgeimpulse.com) working with customers and prospects to bring machine learning to edge devices. By night I'm usually in the shop running the CNC, 3D printing parts, or hacking on side projects.
+By day I work at Qualcomm (via the Edge Impulse acquisition), helping enterprise customers bring machine learning to edge devices. By night I'm usually in the shop, running the CNC, or poking at something that probably shouldn't be automated but is going to be anyway.
 
 ## What I'm building
 
-- **TacoFinder** — iOS app that finds nearby taco spots using SwiftUI, MapKit, and Google Places. 
-- **ScatTrax** - iOS that identifies species of animal using ML to classify their scat using iNaturalist. 
-- **CNC & woodworking** — Custom fabrication projects, from tap handles to signage
-- **3D printing** — Rapid prototyping for everything from enclosures to jigs
+* **[Peregrine Design Werx](https://peregrinedesignwerx.com)** — Side business doing custom CNC woodworking, laser engraving, and 3D printing. Shapeoko 5 Pro, xTool P2 CO2 laser, and a pile of sawdust.
+* **Uncle Roman** — Local LLM inference stack running on a headless Mac Mini M4 with Ollama, Tailscale, and a Slack bot persona. Named after a character from *The Great Outdoors*. Runs OpenClaw for multi-app connectivity.
+* **[hideout](https://github.com/prasta1/hideout)** — Scans real Northeast terrain data to rank hollows, dense canopy, and defensible hidey-holes. Science in service of antisocial tendencies.
+* **[TacoScout](https://github.com/prasta1/TacoScout-App)** — iOS app that finds nearby taco spots using SwiftUI, MapKit, and Google Places.
+* **ScatTrax** — iOS app using CoreML and iNaturalist data to identify animal species from scat. Vermont has a lot of wildlife and I have questions.
 
 ## How I work
 
-Learn by doing, and using the best tool for the job — whether that's a chainsaw, a router bit, or an LLM.
+Learn by doing. Use the best tool for the job — whether that's a chainsaw, a router bit, or an LLM.
 
 ## Get in touch
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/pruster)
+[![Peregrine Design Werx](https://img.shields.io/badge/Peregrine_Design_Werx-222222?style=flat)](https://peregrinedesignwerx.com)
 
 ---
 
