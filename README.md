@@ -8,7 +8,7 @@ By day I work at Qualcomm (via the Edge Impulse acquisition), helping enterprise
 
 * **[hideout](https://github.com/prasta1/hideout)** — Scans real Northeast terrain data to rank hollows, dense canopy, and defensible hidey-holes. Science in service of antisocial tendencies.
 * **[TacoScout](https://github.com/prasta1/TacoScout-App)** — iOS app that finds nearby taco spots using SwiftUI, MapKit, and Google Places.
-* **[ScatTrax] (https://github.com/prasta1/ScatTrax-App)** — iOS app using CoreML and iNaturalist data to identify animal species from scat. Vermont has a lot of wildlife and I have questions.
+* **[ScatTrax](https://github.com/prasta1/ScatTrax-App)** — iOS app using CoreML and iNaturalist data to identify animal species from scat. Vermont has a lot of wildlife and I have questions.
 * **[Peregrine Design Werx](https://peregrinedesignwerx.com)** — Side business doing custom CNC woodworking, laser engraving, and 3D printing. Shapeoko 5 Pro, xTool P2 CO2 laser, and a pile of sawdust.
 
 ## How I work
