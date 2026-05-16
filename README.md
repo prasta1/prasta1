@@ -13,6 +13,8 @@ By day I work at Qualcomm (via the Edge Impulse acquisition), helping enterprise
 
 * **[ScatTrax](https://github.com/prasta1/ScatTrax-App)** — iOS app using CoreML and iNaturalist data to identify animal species from scat. Vermont has a lot of wildlife and I have questions.
 
+* **[Strafe](https://github.com/prasta1/strafe)** — Native macOS/iOS chat client for [LM Studio](https://lmstudio.ai). Streams responses in real time via SSE, supports vision models, and persists conversation history with SwiftData + CloudKit.
+
 **Web**
 
 * **[hideout](https://github.com/prasta1/hideout)** — Scans real Northeast terrain data to rank hollows, dense canopy, and defensible hidey-holes. Science in service of antisocial tendencies.
