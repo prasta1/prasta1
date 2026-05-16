@@ -17,6 +17,8 @@ By day I work at Qualcomm (via the Edge Impulse acquisition), helping enterprise
 
 * **[hideout](https://github.com/prasta1/hideout)** — Scans real Northeast terrain data to rank hollows, dense canopy, and defensible hidey-holes. Science in service of antisocial tendencies.
 
+**Extra-Curriculars**
+
 * **[Peregrine Design Werx](https://peregrinedesignwerx.com)** — My hobby slash side business doing custom CNC woodworking, laser engraving, and 3D printing. Shapeoko 5 Pro, xTool P2 CO2 laser, Prusa Core One and a pile of sawdust.
 
 
