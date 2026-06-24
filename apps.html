@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Built — Patrick Ruster</title>
+  <meta name="description" content="Apps and projects built by Patrick Ruster." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" crossorigin="anonymous"></script>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lora', Georgia, serif; background: #f6f6f6; color: #1f261f; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.8s cubic-bezier(0.19,1,0.22,1), transform 0.8s cubic-bezier(0.19,1,0.22,1); }
+    .reveal.in { opacity: 1; transform: none; }
+    ::-webkit-scrollbar { width: 2px; }
+    ::-webkit-scrollbar-thumb { background: rgba(31,38,31,.18); }
+  </style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const { useState, useEffect } = React;
+
+const EASE  = 'cubic-bezier(0.19, 1, 0.22, 1)';
+const SERIF = "'Lora', Georgia, serif";
+const MONO  = "'DM Mono', 'Courier New', monospace";
+const C = { dark:'#1f261f', light:'#f6f6f6', parch:'#e4e1db', accent:'#a8dfbc', muted:'#798b81', ink:'#3d4d3d' };
+
+const apps = [
+  {
+    name: 'TacoScout',
+    platform: 'iOS',
+    description: 'Finds nearby taco spots. A specialized tool that does one thing — with conviction.',
+    tech: ['SwiftUI', 'MapKit', 'Google Places'],
+    href: 'https://github.com/prasta1/TacoScout-App',
+  },
+  {
+    name: 'ScatTrax',
+    platform: 'iOS',
+    description: 'Identifies animal species from scat using on-device ML and iNaturalist training data. Vermont has a lot of wildlife and I have questions.',
+    tech: ['SwiftUI', 'CoreML', 'iNaturalist'],
+    href: 'https://github.com/prasta1/ScatTrax-App',
+  },
+  {
+    name: 'hideout',
+    platform: 'Web',
+    description: 'Scans real Northeast terrain data to rank hollows, dense canopy, and defensible hidey-holes. Science in service of antisocial tendencies.',
+    tech: ['Terrain Analysis', 'GIS'],
+    href: 'https://github.com/prasta1/hideout',
+  },
+];
+
+function InlineLink({ href, children, dark }) {
+  const [hov, setHov] = useState(false);
+  const base = dark ? 'rgba(246,246,246,0.55)' : C.muted;
+  const on   = dark ? C.accent : C.dark;
+  return (
+    <a href={href} target={href && href.startsWith('http') ? '_blank' : undefined} rel="noopener"
+       onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
+       style={{ fontFamily: MONO, fontSize: 12, letterSpacing: '0.04em', color: hov ? on : base, borderBottom: `1px solid ${hov ? on : (dark ? 'rgba(246,246,246,0.25)' : 'rgba(121,139,129,0.35)')}`, paddingBottom: 1, transition: `color 0.5s ${EASE}, border-color 0.5s ${EASE}` }}>{children}</a>
+  );
+}
+
+function AppCard({ app }) {
+  const [hov, setHov] = useState(false);
+  return (
+    <div
+      onMouseEnter={() => setHov(true)}
+      onMouseLeave={() => setHov(false)}
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        padding: '32px',
+        border: `1px solid ${hov ? C.accent : 'rgba(31,38,31,0.12)'}`,
+        borderRadius: 4,
+        background: hov ? 'rgba(168,223,188,0.06)' : C.light,
+        transition: `border-color 0.5s ${EASE}, background 0.5s ${EASE}`,
+        cursor: 'default',
+      }}
+    >
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 20 }}>
+        <span style={{
+          fontFamily: MONO,
+          fontSize: 10,
+          letterSpacing: '0.14em',
+          textTransform: 'uppercase',
+          color: hov ? C.ink : C.muted,
+          padding: '3px 10px',
+          border: `1px solid ${hov ? C.accent : 'rgba(31,38,31,0.18)'}`,
+          borderRadius: 1000,
+          transition: `color 0.5s ${EASE}, border-color 0.5s ${EASE}`,
+        }}>{app.platform}</span>
+        <a
+          href={app.href}
+          target="_blank"
+          rel="noopener"
+          aria-label={`View ${app.name} on GitHub`}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: 32,
+            height: 32,
+            borderRadius: '50%',
+            border: `1px solid ${hov ? C.accent : 'rgba(31,38,31,0.18)'}`,
+            color: hov ? C.ink : C.muted,
+            transition: `color 0.5s ${EASE}, border-color 0.5s ${EASE}`,
+          }}
+          onClick={e => e.stopPropagation()}
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M7 17L17 7M17 7H7M17 7v10" />
+          </svg>
+        </a>
+      </div>
+
+      <h2 style={{
+        fontFamily: SERIF,
+        fontSize: 'clamp(1.5rem, 3vw, 1.9rem)',
+        fontWeight: 500,
+        lineHeight: 1.15,
+        color: C.dark,
+        marginBottom: 14,
+      }}>{app.name}</h2>
+
+      <p style={{
+        fontFamily: SERIF,
+        fontSize: 15,
+        lineHeight: 1.7,
+        color: C.ink,
+        flex: 1,
+        marginBottom: 28,
+      }}>{app.description}</p>
+
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 7 }}>
+        {app.tech.map(tag => (
+          <span key={tag} style={{
+            fontFamily: MONO,
+            fontSize: 10,
+            letterSpacing: '0.07em',
+            padding: '3px 10px',
+            border: '1px solid rgba(31,38,31,0.14)',
+            borderRadius: 1000,
+            color: C.muted,
+          }}>{tag}</span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const obs = new IntersectionObserver(
+        es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); obs.unobserve(e.target); } }),
+        { threshold: 0.04, rootMargin: '0px 0px -30px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => { el.classList.remove('in'); obs.observe(el); });
+      return () => obs.disconnect();
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+
+      {/* Nav */}
+      <div style={{ background: C.dark, width: '100%' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '24px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <a href="index.html" style={{ fontFamily: SERIF, fontSize: 16, fontWeight: 500, color: C.light, opacity: 0.7, transition: `opacity 0.3s ${EASE}` }}
+             onMouseEnter={e => e.target.style.opacity = 1} onMouseLeave={e => e.target.style.opacity = 0.7}>
+            ← Patrick Ruster
+          </a>
+          <a href="https://github.com/prasta1" target="_blank" rel="noopener"
+             style={{ fontFamily: MONO, fontSize: 11, letterSpacing: '0.08em', color: 'rgba(246,246,246,0.45)', transition: `color 0.3s ${EASE}` }}
+             onMouseEnter={e => e.target.style.color = C.accent} onMouseLeave={e => e.target.style.color = 'rgba(246,246,246,0.45)'}>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      {/* Hero */}
+      <div style={{ background: C.dark, width: '100%' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '56px 32px 72px' }}>
+          <div className="reveal in">
+            <p style={{ fontFamily: MONO, fontSize: 11, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'rgba(246,246,246,0.4)', marginBottom: 18 }}>
+              <span style={{ display: 'inline-block', width: 18, height: 1, background: C.accent, verticalAlign: 'middle', marginRight: 12 }} />
+              Built
+            </p>
+            <h1 style={{ fontFamily: SERIF, fontSize: 'clamp(2.2rem, 5vw, 3.2rem)', fontWeight: 400, lineHeight: 1.1, letterSpacing: '-0.01em', color: C.light, maxWidth: 580 }}>
+              Things I've <em style={{ color: C.accent }}>shipped.</em>
+            </h1>
+            <p style={{ fontFamily: SERIF, fontSize: 17, lineHeight: 1.7, color: 'rgba(246,246,246,0.52)', marginTop: 24, maxWidth: 500 }}>
+              A mix of native iOS apps, web experiments, and utilities. Mostly built because I wanted the thing to exist.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Cards */}
+      <div style={{ background: C.light, flex: 1, width: '100%' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '72px 32px 96px' }}>
+          <div className="reveal" style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+            gap: 20,
+          }}>
+            {apps.map(app => <AppCard key={app.name} app={app} />)}
+          </div>
+        </div>
+      </div>
+
+      {/* Footer */}
+      <div style={{ background: C.dark, width: '100%' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', padding: '28px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
+          <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(246,246,246,0.3)' }}>Patrick Ruster — Cambridge, VT</span>
+          <span style={{ fontFamily: SERIF, fontStyle: 'italic', fontSize: 13, color: 'rgba(246,246,246,0.3)' }}>Designed to last. Built by hand.</span>
+        </div>
+      </div>
+
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>
