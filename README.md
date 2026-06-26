@@ -7,13 +7,17 @@ By day I work at Qualcomm (via the Edge Impulse acquisition), helping enterprise
 
 ## What I'm building
 
+**LLM Things**
+
+* **[Modelo](https://github.com/prasta1/Modelo)** — Native macOS client for running inference against local and cloud LLMs. Connects to LM Studio over Tailscale, OpenRouter, and any OpenAI-compatible API. Streaming chat with token metrics, agentic tool use (Firecrawl + MCP), model load/unload from the picker, and a menu-bar mini chat. SwiftUI + SwiftData + Swift Charts, zero third-party packages. Named after the beer 🍋‍🟩 the logo is a lime.
+
+* **[Strafe](https://github.com/prasta1/strafe)** — Native macOS/iOS chat client for [LM Studio](https://lmstudio.ai). Streams responses in real time via SSE, supports vision models, and persists conversation history with SwiftData + CloudKit.
+
 **IOS**
 
 * **[TacoScout](https://github.com/prasta1/TacoScout-App)** — iOS app that finds nearby taco spots using SwiftUI, MapKit, and Google Places. I love specialized tools, and that principle applies here, a simple application that does one thing... FINDS TACOS
 
 * **[ScatTrax](https://github.com/prasta1/ScatTrax-App)** — iOS app using CoreML and iNaturalist data to identify animal species from scat. Vermont has a lot of wildlife and I have questions.
-
-* **[Strafe](https://github.com/prasta1/strafe)** — Native macOS/iOS chat client for [LM Studio](https://lmstudio.ai). Streams responses in real time via SSE, supports vision models, and persists conversation history with SwiftData + CloudKit.
 
 **Web**
 
