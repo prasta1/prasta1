@@ -27,6 +27,8 @@ By day I work at Qualcomm (via the Edge Impulse acquisition), helping enterprise
 
 * **[BottomlessHole](https://github.com/prasta1/BottomlessHole)** — Local, undetectable DNS ad sinkhole for macOS. Pi-hole-style ad and tracker blocking for every app on the machine, not just the browser. A Go daemon does the DNS sinkholing, with a native Tauri dashboard on top.
 
+* **[Cull](https://github.com/prasta1/Cull)** — macOS duplicate photo finder with exact (SHA-256), perceptual, screenshot, and AI-image detection.
+
 **Extra-Curriculars**
 
 * **[Peregrine Design Werx](https://peregrinedesignwerx.com)** — My hobby slash side business doing custom CNC woodworking, laser engraving, and 3D printing. Shapeoko 5 Pro, xTool P2 CO2 laser, Prusa Core One and a pile of sawdust.
