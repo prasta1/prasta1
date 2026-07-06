@@ -34,6 +34,13 @@ By day I work at Qualcomm (via the Edge Impulse acquisition), helping enterprise
 * **[Peregrine Design Werx](https://peregrinedesignwerx.com)** — My hobby slash side business doing custom CNC woodworking, laser engraving, and 3D printing. Shapeoko 5 Pro, xTool P2 CO2 laser, Prusa Core One and a pile of sawdust.
 
 
+## Favorite Tools
+
+Things other people built that I'd miss if they vanished.
+
+* **[macmon](https://github.com/vladkens/macmon)** — Real-time system monitor for Apple Silicon, no sudo required. A Rust TUI showing CPU/GPU/ANE load, power draw, and temps — great for watching what local LLM inference actually does to the machine.
+
+
 ## How I work
 
 Learn by doing. Break shit. Experiment. Use the best tool for the job — whether that's a chainsaw, a router bit, or an LLM.
