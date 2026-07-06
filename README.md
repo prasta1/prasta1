@@ -40,6 +40,8 @@ Things other people built that I'd miss if they vanished.
 
 * **[macmon](https://github.com/vladkens/macmon)** — Real-time system monitor for Apple Silicon, no sudo required. A Rust TUI showing CPU/GPU/ANE load, power draw, and temps — great for watching what local LLM inference actually does to the machine.
 
+* **[Ghostty](https://github.com/ghostty-org/ghostty)** — Fast, GPU-accelerated terminal emulator written in Zig, with actual platform-native UI on macOS. A terminal that feels like a Mac app instead of a port.
+
 
 ## How I work
 
