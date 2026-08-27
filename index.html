@@ -30,7 +30,7 @@
   --sans:      'Archivo', sans-serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; color-scheme: light; }
 body { background: var(--bg); color: var(--ink); font-family: var(--serif); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { color: var(--accent-hover); text-decoration: underline; }
@@ -174,7 +174,7 @@ footer .meta { font-size: 13.5px; color: var(--ink-6); font-family: var(--sans);
           <p class="outcome"><strong>Led the analysis that broke a flawed lead scoring model.</strong> The old system rewarded marketing engagement over product usage; I showed it was broken and proposed the fix.</p>
           <ul>
             <li>Analysis of 476 PQL-tagged contacts found 90% trained a model but never deployed, and zero corporate-email contacts deployed.</li>
-            <li>Diagnosed four root-cause hypotheses for the deployment gap and proposed replacing opaque scoring with a simple "Holy Trinity" definition: data, train, deploy.</li>
+            <li>Diagnosed four root-cause hypotheses for the deployment gap and proposed replacing opaque scoring with a simple &ldquo;Holy Trinity&rdquo; definition: data, train, deploy.</li>
             <li>Worked across RevOps, Product, and Engineering as part of the PQL tiger team.</li>
           </ul>
         </div>
@@ -186,7 +186,7 @@ footer .meta { font-size: 13.5px; color: var(--ink-6); font-family: var(--sans);
           <h3>Product analytics and expansion scanning</h3>
           <p class="outcome"><strong>Wrote Python tooling that scores every organization in the product</strong> for upsell and outreach readiness.</p>
           <ul>
-            <li>Streaming scan scripts classify orgs by "Holy Trinity" activity (data, train, deploy) and compute a 0-100 expansion score from user growth, activity growth, and breadth.</li>
+            <li>Streaming scan scripts classify orgs by &ldquo;Holy Trinity&rdquo; activity (data, train, deploy) and compute a 0-100 expansion score from user growth, activity growth, and breadth.</li>
             <li>An enterprise scan surfaces which accounts are expansion-ready; a PQL scan surfaces which non-enterprise orgs behave like real leads.</li>
             <li>A validator queries the analytics API directly to confirm an account's ingestion, training, and deployment activity before a sales conversation.</li>
           </ul>
