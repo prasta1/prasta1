@@ -5,67 +5,80 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The resume &middot; Patrick Ruster</title>
 <meta name="description" content="Patrick Ruster resume: customer success and business development leader for edge AI enterprises.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --ivory:    #FAF9F5;
-  --white:    #FFFFFF;
-  --slate:    #141413;
-  --clay:     #D97757;
-  --gray-150: #F0EEE6;
-  --gray-300: #D1CFC5;
-  --gray-500: #87867F;
-  --gray-700: #3D3D3A;
-  --border:   1.5px solid var(--gray-300);
-  --radius:   12px;
-  --serif:    ui-serif, Georgia, "Times New Roman", serif;
-  --sans:     system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --mono:     ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --bg:     oklch(0.975 0.005 240);
+  --ink:    oklch(0.24 0.015 250);
+  --ink-2:  oklch(0.34 0.015 250);
+  --ink-3:  oklch(0.42 0.015 250);
+  --ink-4:  oklch(0.45 0.015 250);
+  --ink-5:  oklch(0.48 0.015 250);
+  --accent: oklch(0.5 0.13 245);
+  --accent-hover: oklch(0.38 0.13 245);
+  --selection: oklch(0.88 0.05 245);
+  --border: 1px solid oklch(0.85 0.01 250);
+  --serif:  'Lora', Georgia, serif;
+  --sans:   'Archivo', sans-serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { background: var(--ivory); color: var(--gray-700); font-family: var(--sans); line-height: 1.6; }
-.page { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+body { background: var(--bg); color: var(--ink); font-family: var(--serif); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); text-decoration: underline; }
+::selection { background: var(--selection); }
+.page { max-width: 860px; margin: 0 auto; padding: 0 32px; }
 .print-only { display: none; }
 @media print {
-  body { background: var(--white); }
+  body { background: #fff; }
   .screen-only { display: none !important; }
   .print-only { display: block; }
   .page { padding: 0; }
   header, footer { page-break-inside: avoid; }
-  .role-group + .role-group { margin-top: 32px; }
+  .role + .role { margin-top: 32px; }
 }
 
-.nav { display: flex; justify-content: space-between; align-items: center; padding: 32px 0; border-bottom: 1px solid var(--gray-300); }
-.nav .name { font-family: var(--mono); font-size: 13px; letter-spacing: 0.03em; color: var(--slate); }
-.nav ul { display: flex; gap: 28px; list-style: none; }
-.nav a { font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; color: var(--gray-500); text-decoration: none; border-bottom: 1px solid transparent; }
-.nav a:hover { color: var(--slate); border-color: var(--gray-300); }
+.nav { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 28px 0; font-family: var(--sans); }
+.nav .name { font-weight: 800; font-size: 16px; color: var(--ink); }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: 14px; font-weight: 500; }
+.nav a { color: var(--ink-2); }
+.nav a:hover { text-decoration: none; color: var(--accent); }
+.nav a.active { color: var(--accent); }
 
-.header { text-align: center; padding: 80px 0 60px; }
-.header h1 { font-family: var(--serif); font-weight: 500; font-size: 42px; color: var(--slate); letter-spacing: -0.01em; }
-.header .sub { font-family: var(--mono); font-size: 14px; color: var(--clay); margin-top: 10px; }
-.header .contact { margin-top: 22px; display: flex; gap: 24px; justify-content: center; font-family: var(--mono); font-size: 13px; color: var(--gray-500); }
-.header .contact a { color: var(--slate); text-decoration: none; border-bottom: 1px solid var(--clay); }
+.header { border-bottom: 2px solid var(--ink); padding-bottom: 28px; margin-bottom: 40px; }
+.header h1 { font-family: var(--sans); font-weight: 800; font-size: 40px; letter-spacing: -0.015em; }
+.header .sub { font-size: 18px; margin: 10px 0 14px; color: var(--ink-2); }
+.header .contact { display: flex; gap: 18px; flex-wrap: wrap; align-items: baseline; font-family: var(--sans); font-size: 13.5px; color: var(--ink-5); }
 
-section { padding: 56px 0 0; }
-h2 { font-family: var(--serif); font-weight: 500; font-size: 24px; color: var(--slate); margin-bottom: 28px; border-bottom: 1px solid var(--gray-300); padding-bottom: 10px; }
+section { margin-bottom: 44px; }
+section:last-child { margin-bottom: 0; }
+h2 { font-family: var(--sans); font-weight: 700; font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
+.intro { font-size: 16.5px; line-height: 1.7; max-width: 66ch; }
 
-.role-group + .role-group { margin-top: 44px; }
-.role { display: grid; grid-template-columns: 220px 1fr; gap: 8px 32px; }
-.role .company { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gray-500); }
-.role .title { font-family: var(--serif); font-weight: 500; font-size: 20px; color: var(--slate); }
-.role .dates { font-family: var(--mono); font-size: 12px; letter-spacing: 0.03em; color: var(--gray-500); }
-.role .blurb { grid-column: 2; font-size: 15px; line-height: 1.55; }
+.roles { display: flex; flex-direction: column; gap: 32px; }
+.role { display: grid; grid-template-columns: 150px 1fr; gap: 24px; }
+.role .dates { font-family: var(--sans); font-size: 13.5px; color: var(--ink-4); padding-top: 3px; }
+.role h3 { font-family: var(--sans); font-weight: 700; font-size: 18px; }
+.role .org { font-family: var(--sans); font-size: 14.5px; color: var(--ink-3); margin: 3px 0 10px; }
+.role ul { padding-left: 18px; display: flex; flex-direction: column; gap: 7px; }
+.role li { font-size: 15px; line-height: 1.6; color: var(--ink-2); }
 
-.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 32px; }
-.skill-item { font-family: var(--mono); font-size: 13px; color: var(--gray-700); }
-.skill-item .cat { color: var(--clay); }
+.skills-grid { display: grid; grid-template-columns: 150px 1fr; gap: 12px 24px; }
+.skill-item.cat { font-family: var(--sans); font-weight: 600; font-size: 14px; color: var(--ink); }
+.skill-item.desc { font-size: 15px; color: var(--ink-2); }
 
-.footnote { margin-top: 48px; text-align: center; font-family: var(--mono); font-size: 12px; color: var(--gray-500); border-top: 1px solid var(--gray-300); padding-top: 20px; }
+.edu { display: grid; grid-template-columns: 150px 1fr; gap: 24px; }
+.edu .degree { font-family: var(--sans); font-weight: 700; font-size: 16px; }
+.edu .school { font-size: 14.5px; color: var(--ink-3); margin-top: 3px; }
+
+.footnote { margin-top: 48px; text-align: center; font-family: var(--sans); font-size: 12px; color: var(--ink-5); border-top: var(--border); padding-top: 20px; }
 
 @media (max-width: 860px) {
-  .role { grid-template-columns: 1fr; }
-  .skills-grid { grid-template-columns: 1fr; }
-  .header h1 { font-size: 34px; }
+  .role, .edu { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; gap: 20px; }
+  .skill-item.cat { margin-bottom: 4px; }
+  .header h1 { font-size: 32px; }
 }
 </style>
 </head>
@@ -76,14 +89,16 @@ h2 { font-family: var(--serif); font-weight: 500; font-size: 24px; color: var(--
     <span class="name">Patrick Ruster</span>
     <ul>
       <li><a href="index.html">The work</a></li>
-      <li><a href="resume.html">The resume</a></li>
+      <li><a href="resume.html" class="active">The resume</a></li>
       <li><a href="apps.html">Apps</a></li>
+      <li><a href="mailto:ruster.patrick@gmail.com">Email</a></li>
+      <li><a href="https://linkedin.com/in/pruster" target="_blank" rel="noopener">LinkedIn</a></li>
     </ul>
   </nav>
 
   <header class="header">
     <h1>Patrick Ruster</h1>
-    <div class="sub">Customer success &amp; business development for edge AI enterprises</div>
+    <p class="sub">Customer success and business development leader</p>
     <div class="contact">
       <span>Cambridge, Vermont &middot; Remote-first</span>
       <a href="mailto:ruster.patrick@gmail.com">ruster.patrick@gmail.com</a>
@@ -93,43 +108,87 @@ h2 { font-family: var(--serif); font-weight: 500; font-size: 24px; color: var(--
   </header>
 
   <section>
-    <h2>Background</h2>
-    <div class="role">
-      <span class="company">Qualcomm (via Edge Impulse)</span>
-      <span class="title">Senior Business Development Manager</span>
-      <span class="dates">Mar 2025 &mdash; present</span>
-      <p class="blurb">Edge computing acquisition; shifted from CS leadership toward AE / net-new logo work. Actively exploring VP / Director / Head of Customer Success roles ($150K+ base, remote or VT). Built the product-led growth engine, customer intelligence system, and retention frameworks documented on the work page.</p>
-    </div>
-    <div class="role">
-      <span class="company">Edge Impulse</span>
-      <span class="title">VP of Customer Success</span>
-      <span class="dates">2020 &mdash; 2025</span>
-      <span class="company">Sama</span>
-      <span class="title">Senior Customer Success Manager</span>
-      <span class="dates">2019 &mdash; 2020</span>
-      <p class="blurb">10+ years in SaaS customer success and business development across DataRobot, CarGurus, Faraday, and startups. BS in Business Administration (Marketing &amp; Entrepreneurship) from SUNY Plattsburgh.</p>
+    <p class="intro">10+ years in SaaS customer success and business development. Led customer success at Edge Impulse from 2020 through its acquisition by Qualcomm, building the retention, expansion, and product-led growth systems documented on <a href="index.html">the work page</a>. Earlier career across DataRobot, CarGurus, Faraday, Sama, and startups.</p>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <div class="roles">
+
+      <div class="role">
+        <div class="dates">Mar 2025 &mdash; present</div>
+        <div>
+          <h3>Senior Business Development Manager</h3>
+          <div class="org">Qualcomm (via Edge Impulse acquisition)</div>
+          <ul>
+            <li>Own retention and expansion for a portfolio of enterprise edge AI accounts, plus the product-led growth machinery that turns active users into the next deals.</li>
+            <li>Built the PLG-to-enterprise lifecycle marketing engine: behaviorally triggered email sequences targeting exact funnel states from day 0 to day 21.</li>
+            <li>Wrote Python tooling that scores every organization in the product for expansion and outreach readiness, validated against the analytics API before any sales conversation.</li>
+            <li>Led the data analysis (476 PQL-tagged contacts) that replaced a flawed lead scoring model, working across RevOps, Product, and Engineering.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <div class="dates">2020 &mdash; 2025</div>
+        <div>
+          <h3>VP of Customer Success</h3>
+          <div class="org">Edge Impulse</div>
+          <ul>
+            <li>Led customer success from early stage through acquisition by Qualcomm, owning retention, renewals, and account health for the enterprise portfolio.</li>
+            <li>Built the customer intelligence system: research-grade briefs and stakeholder maps on 18 enterprise accounts, so every retention decision starts from evidence.</li>
+            <li>Automated at-risk detection with health scoring and dashboards ranking renewal proximity, overdue touches, and health flags.</li>
+            <li>Designed the lead management framework adopted by the sales organization: 8 stages, SLA-based speed-to-lead rules, and a 7-touch cadence.</li>
+            <li>Built the sales enablement library: objection handling scripts, buyer persona guides, and architecture and pricing cheat sheets.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <div class="dates">2019 &mdash; 2020</div>
+        <div>
+          <h3>Senior Customer Success Manager</h3>
+          <div class="org">Sama</div>
+          <ul>
+            <li>Managed enterprise customer relationships for AI training data services.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="role">
+        <div class="dates">Earlier</div>
+        <div>
+          <h3>Customer success &amp; business development roles</h3>
+          <div class="org">DataRobot, CarGurus, Faraday, and startups</div>
+          <ul>
+            <li>10+ years across SaaS customer success, account management, and go-to-market roles.</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <section>
     <h2>Core capabilities</h2>
     <div class="skills-grid">
-      <div class="skill-item"><span class="cat">Strategy</span> &middot; GTM motion design, retention vs. expansion, pricing &amp; packaging</div>
-      <div class="skill-item"><span class="cat">Systems</span> &middot; Product-led growth, PQL scoring, lead management, CRM/account taxonomy</div>
-      <div class="skill-item"><span class="cat">Analytics</span> &middot; Amplitude, usage signals, Python automation, customer health scoring</div>
-      <div class="skill-item"><span class="cat">Enablement</span> &middot; Sales playbooks, objection handling, stakeholder mapping, buyer personas</div>
-      <div class="skill-item"><span class="cat">Execution</span> &middot; Cross-functional leadership, customer workshops, survey design, renewal forecasting</div>
-      <div class="skill-item"><span class="cat">Tools</span> &middot; Amplitude, HubSpot CRM, Python, Notion, Google Workspace, Slack</div>
+      <div class="skill-item cat">Strategy</div><div class="skill-item desc">GTM motion design, retention vs. expansion, pricing &amp; packaging</div>
+      <div class="skill-item cat">Systems</div><div class="skill-item desc">Product-led growth, PQL scoring, lead management, CRM/account taxonomy</div>
+      <div class="skill-item cat">Analytics</div><div class="skill-item desc">Amplitude, usage signals, Python automation, customer health scoring</div>
+      <div class="skill-item cat">Enablement</div><div class="skill-item desc">Sales playbooks, objection handling, stakeholder mapping, buyer personas</div>
+      <div class="skill-item cat">Execution</div><div class="skill-item desc">Cross-functional leadership, customer workshops, survey design, renewal forecasting</div>
+      <div class="skill-item cat">Tools</div><div class="skill-item desc">Amplitude, HubSpot CRM, Python, Notion, Google Workspace, Slack</div>
     </div>
   </section>
 
   <section>
     <h2>Education</h2>
-    <div class="role">
-      <span class="company">BS Business Administration</span>
-      <span class="title">SUNY Plattsburgh</span>
-      <span class="dates">Marketing &amp; Entrepreneurship</span>
-      <p class="blurb"></p>
+    <div class="edu">
+      <div></div>
+      <div>
+        <div class="degree">BS, Business Administration</div>
+        <div class="school">SUNY Plattsburgh &middot; Marketing &amp; Entrepreneurship</div>
+      </div>
     </div>
   </section>
 
