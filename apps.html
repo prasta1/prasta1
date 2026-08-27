@@ -33,37 +33,31 @@
 html { scroll-behavior: smooth; color-scheme: light; }
 body { background: var(--bg); color: var(--ink); font-family: var(--serif); line-height: 1.6; -webkit-font-smoothing: antialiased; }
 a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); text-decoration: underline; }
 ::selection { background: var(--selection); }
-.page { max-width: 900px; margin: 0 auto; padding: 0 32px; }
+.page { max-width: 1060px; margin: 0 auto; padding: 0 32px; }
 
 .dark { background: var(--dark-bg); color: var(--dark-ink); }
 
-.nav { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 24px 0; font-family: var(--sans); }
-.nav .name { font-weight: 500; font-size: 16px; color: var(--dark-ink); opacity: 0.75; transition: opacity 0.2s; }
-.nav .name:hover { opacity: 1; }
-.nav .gh { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dark-ink-3); transition: color 0.2s; }
-.nav .gh:hover { color: var(--accent); }
+.nav { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 28px 0; font-family: var(--sans); }
+.nav .name { font-weight: 800; font-size: 16px; letter-spacing: 0.01em; color: var(--dark-ink); }
+.nav ul { display: flex; gap: 26px; list-style: none; font-size: 14px; font-weight: 500; }
+.nav a { color: var(--dark-ink-2); }
+.nav a:hover { text-decoration: none; color: var(--accent); }
+.nav a.active { color: var(--accent); }
 
-.hero { padding: 32px 0 72px; }
+.hero { padding: 72px 0 56px; }
 .eyebrow {
-  display: flex; align-items: center; gap: 12px;
-  font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--dark-ink-3);
+  font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--accent);
 }
-.eyebrow .bar { display: inline-block; width: 18px; height: 1px; background: var(--accent); }
-h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 5vw, 46px); line-height: 1.1; letter-spacing: -0.01em; margin-top: 18px; max-width: 20ch; }
-h1 em { font-style: italic; color: var(--accent); }
-.deck { font-family: var(--serif); font-size: 17px; line-height: 1.7; color: var(--dark-ink-2); margin-top: 24px; max-width: 500px; }
+h1 { font-family: var(--sans); font-weight: 800; font-size: clamp(36px, 5.5vw, 56px); line-height: 1.06; letter-spacing: -0.015em; margin-top: 18px; max-width: 20ch; text-wrap: balance; }
+.deck { font-size: 19px; line-height: 1.65; max-width: 58ch; margin-top: 28px; color: var(--dark-ink-2); }
 
 .cards { background: var(--bg); color: var(--ink); }
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; padding: 72px 0 96px; }
 
-.card {
-  display: flex; flex-direction: column; padding: 32px;
-  border: 1px solid var(--card-border); border-radius: 8px; background: var(--card-bg);
-  transition: border-color 0.3s, background 0.3s;
-}
-.card:hover { border-color: var(--accent); background: var(--selection); }
+.card { display: flex; flex-direction: column; padding: 22px 24px; border: 1px solid var(--card-border); background: var(--card-bg); }
 .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
 .platform {
   font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
@@ -84,15 +78,17 @@ h1 em { font-style: italic; color: var(--accent); }
   border: 1px solid var(--card-border); border-radius: 999px; color: var(--ink-5);
 }
 
-footer { padding: 28px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
-footer .loc { font-family: var(--sans); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dark-ink-3); }
-footer .tag { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--dark-ink-3); }
+footer { padding: 40px 0 56px; }
+footer .meta { font-size: 13.5px; color: var(--ink-6); font-family: var(--sans); }
 
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity 0.6s cubic-bezier(0.19,1,0.22,1), transform 0.6s cubic-bezier(0.19,1,0.22,1); }
 .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .reveal, .reveal.in { opacity: 1; transform: none; transition: none; }
-  .card, .gh-link, .nav .name, .nav .gh { transition: none; }
+  .gh-link { transition: none; }
+}
+@media (max-width: 860px) {
+  .hero { padding: 56px 0 40px; }
 }
 </style>
 </head>
@@ -101,12 +97,18 @@ footer .tag { font-family: var(--serif); font-style: italic; font-size: 13px; co
 <div class="dark">
   <div class="page">
     <nav class="nav">
-      <a href="index.html" class="name">&larr; Patrick Ruster</a>
-      <a href="https://github.com/prasta1" target="_blank" rel="noopener" class="gh">GitHub</a>
+      <span class="name">Patrick Ruster</span>
+      <ul>
+        <li><a href="index.html">The work</a></li>
+        <li><a href="resume.html">The resume</a></li>
+        <li><a href="apps.html" class="active">Apps</a></li>
+        <li><a href="mailto:ruster.patrick@gmail.com">Email</a></li>
+        <li><a href="https://linkedin.com/in/pruster" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
     </nav>
     <header class="hero reveal in">
-      <div class="eyebrow"><span class="bar"></span>Built</div>
-      <h1>Things I&rsquo;ve <em>shipped.</em></h1>
+      <div class="eyebrow">Built</div>
+      <h1>Things I&rsquo;ve shipped.</h1>
       <p class="deck">A mix of native iOS apps, web experiments, and utilities. Mostly built because I wanted the thing to exist.</p>
     </header>
   </div>
@@ -153,14 +155,9 @@ footer .tag { font-family: var(--serif); font-style: italic; font-size: 13px; co
       </div>
 
     </div>
-  </div>
-</div>
 
-<div class="dark">
-  <div class="page">
     <footer>
-      <span class="loc">Patrick Ruster &mdash; Cambridge, VT</span>
-      <span class="tag">Designed to last. Built by hand.</span>
+      <div class="meta">Patrick Ruster &mdash; Cambridge, VT &middot; Designed to last, built by hand.</div>
     </footer>
   </div>
 </div>
