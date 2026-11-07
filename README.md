@@ -35,9 +35,7 @@ Learn by doing. Break it in a sandbox, then automate the parts that shouldn't be
 
 ## Get in touch
 
-[![Personal site](https://img.shields.io/badge/prasta1.github.io-222222?style=flat&logo=githubpages&logoColor=white)](https://prasta1.github.io)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/pruster)
-[![Peregrine Design Werx](https://img.shields.io/badge/Peregrine_Design_Werx-222222?style=flat)](https://peregrinedesignwerx.com)
 
 ---
 
